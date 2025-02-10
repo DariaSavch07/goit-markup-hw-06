@@ -265,7 +265,8 @@ color: #2e2f42;
 }
 
 .main-section-text, .section-text, .text-portfolio, .footer-text {
-font-weight: 500;
+/*font-weight: 500;*/
+font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
@@ -290,6 +291,8 @@ background-color: #FFFFFF;
 
 
 /* section people */
+
+
 
 .section-people {
     padding: 32px 0;
@@ -317,6 +320,10 @@ margin-bottom: 72px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 max-width: 264px;
 max-height: 428px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 72px;
 }
 
 .main-section-on-photo {
@@ -418,9 +425,10 @@ justify-content: center;
 }
 
 .section-itime-portfolio {
-    width: calc((100% - 48px) / 3);
+    /*width: calc((100% - 48px) / 3);*/
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0%);
+    margin-bottom: 48px;
 }
 
 .section-photo {
@@ -451,20 +459,23 @@ justify-content: center;
 /* footer */
 
 .footer {
-    padding: 100px 0;
+    /*padding: 100px 0;*/
+    padding: 96px 0;
     background-color: #2e2f42;
     
 }
 
 .footer-text {
-    max-width: 264px;
+    /*max-width: 264px;*/
+    max-width: 260px;
     color: #f4f4fd;
 }
 
 
 
 .footer-logo {
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
+    margin-bottom: 20px;
     display: inline-block;
 } 
 
@@ -482,16 +493,22 @@ justify-content: center;
 background-color: #31d0aa;
 }
 
-.container-footer {
-    display: flex; 
+/*.container-footer {
+   /* display: flex; 
     align-items: baseline;
-}
+}*/
 
 .footer-div-itim {
-    margin-right: 120px;
+    text-align: center;
+    justify-content: center;
+    /*margin-right: 120px;*/
 }
 .footer-div-icon{
-    margin-right: 80px;
+    /*margin-right: 80px;*/
+    padding-top: 81px;
+    padding-bottom: 77px;
+    text-align: center;
+    justify-content: center;
 }
 
 .footer-div-text {
@@ -510,6 +527,8 @@ background-color: #31d0aa;
 
 .footer-ul-text {
     gap: 16px;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -525,6 +544,11 @@ background-color: #31d0aa;
 
 .footer-icon {
     fill:#f4f4fd;
+}
+
+.div-subscribe {
+    text-align: center;
+    justify-content: center;
 }
 
 /* lable-footer */
@@ -553,15 +577,15 @@ color: #FFFFFF;
 } 
 
 
-.footer-form{
-    gap: 24px;
+/*.footer-form{
+    /*gap: 24px;
     display: flex;
-}
+}*/
 
 .footer-button {
     min-width: 165px;
     height: 40px;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     font-family: "Roboto", sans-serif;
