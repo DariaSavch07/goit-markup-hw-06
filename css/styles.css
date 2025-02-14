@@ -86,6 +86,14 @@ a {
     margin-left: auto;
 }
 
+.nav-list {
+    display: none;
+}
+
+.contacts {
+    display: none;
+}
+
 /* main */
 
 /* section title*/
@@ -852,6 +860,7 @@ color: #434455;
 
 @media screen and (min-width:768px){
 
+    /*common*/
     img {
         display: block;
       }
@@ -863,6 +872,8 @@ color: #434455;
         padding-right: 16px;
       }  
 
+      /*header*/
+      
     .nav-link {
         padding: 24px 0;
     font-weight: 500;
@@ -890,14 +901,19 @@ color: #434455;
     }
     
     /*.contacts-list {
-        /*gap: 40px;
+        gap: 40px;
         display: flex;
     }*/
     
     
     .contacts {
+        display: flex;
         font-style: normal;
         margin-left: auto;
+    }
+
+    .item-line {
+        display: none;
     }
 
     .contacts-item {
@@ -928,11 +944,13 @@ color: #434455;
     }
 
     .nav-list {
-        gap: 40px;
         display: flex;
-        margin-left: 120px;
+        gap: 40px;
+        text-align: center;
+        justify-content: center;
     } 
-            
+        /*description*/    
+
             .main-section-list {
                 gap: 24px;
                 row-gap: 72px;
@@ -941,6 +959,8 @@ color: #434455;
             .main-section-item{
                 width: calc((100% - 24px)/2);
             }
+
+         /*title*/
 
     .main-title {
         max-width: 496px;
@@ -953,6 +973,8 @@ color: #434455;
         padding: 112px 0 112px 0;
     }
 
+    /*people*/
+
     .section-item {
         width: calc((100% - 24px) / 2);
     }    
@@ -962,6 +984,8 @@ color: #434455;
         display: flex;
 
     }
+
+/*apps*/
 
     .section-itime-portfolio {
         width: calc((100% - 48px) / 2);
@@ -976,13 +1000,54 @@ color: #434455;
     justify-content: center;
     }
 
+/*footer*/
+
     .container-footer {
         padding: 0 108px;
     }
 
-    .footer-div-icon {
-margin-left: auto 0;
-    }
+.logo {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.footer-text {
+    display: flex;
+    max-width: 264px;
+    margin-top: 16px;
+}
+
+.footer-div-icon {
+   padding: 0;
+}
+
+.footer-button {
+    margin: 0;
+}
+
+.footer-btn {
+    padding-top: 0;
+}
+
+.footer-form {
+    display: flex;
+    gap: 24px;
+}
+
+.lable-par {
+    display: flex;
+}
+
+.div-subscribe {
+    padding-top: 72px;
+}
+
+/*overlay*/
+
+.modal {
+    width: 408px;
+    min-height: 584px;
+}
 
 }
 
