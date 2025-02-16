@@ -834,6 +834,8 @@ color: #434455;
         padding: 0 16px 0px 16px;
         margin-left: 0;
         margin-right: 0;
+        text-align: center;
+        justify-content: center;
       }  
 
       /*header*/
@@ -841,8 +843,6 @@ color: #434455;
       .header-container {
         display: flex;
         padding-top: 16px;
-        text-align: center;
-        justify-content: center;
       }
 
       .header {
@@ -1110,8 +1110,6 @@ color: #434455;
 
 
 /*apps*/
-
-
 
 .section-itime-portfolio {
     width: calc((100% - 48px) / 3);
