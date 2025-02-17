@@ -34,11 +34,17 @@ a {
     overflow: hidden;
   }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 /* common */
 
 .container {
-    max-width: 288px;
+    max-width: 320px;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -716,7 +722,7 @@ margin-bottom: 16px;
 
 /* overlay 2*/
 
-.modal-overlay-phone {
+.mobail-menu-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -725,21 +731,12 @@ margin-bottom: 16px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+        background-color: #FFFFFF;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-phone {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 320px;
-    min-height: 640px;
-    padding: 0 16px;
-    transform: translate(-50%, -50%);
-    background-color: #FFFFFF;
-}
 
-.modal-overlay-phone.is-open-phone {
+.mobail-menu-container.is-open-phone {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -798,12 +795,13 @@ color: #2e2f42;
     padding-bottom: 40px;
 }
 
-.contacts-lable {
-    padding-bottom: 48px;
+.contacts-link-lable {
+    color: #fff;
 }
 
 .contacts-lable {
-    max-width: 193px;
+    padding-bottom: 48px;
+        max-width: 193px;
     font-style: normal;
 }
 
@@ -823,26 +821,20 @@ color: #434455;
 
 @media screen and (min-width:768px){
 
-    /*common*/
-    img {
-        display: block;
-      }
+.modal-overlay-phone {
+    display: none;
+}
 
+    /*common*/
 
     .container{
         max-width: 768px;
-        padding: 0 16px 0px 16px;
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-        justify-content: center;
       }  
 
       /*header*/
 
       .header-container {
         display: flex;
-        padding-top: 16px;
       }
 
       .header {
@@ -859,13 +851,11 @@ color: #434455;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    text-align: center;
-    justify-content: center;
 }
 
     .studio-link {
         position: relative;
-        padding: 24px 0;
+        padding-bottom: 20px;
         color: #404bbf;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
@@ -956,8 +946,11 @@ color: #434455;
 
     .section-list {
         flex-wrap:wrap;
+        gap: 24px;
+        row-gap: 64px;
         display: flex;
-
+        text-align: center;
+        justify-content: center;
     }
 
 /*apps*/
@@ -968,7 +961,7 @@ color: #434455;
 
     .section-text-portfolio { 
     flex-wrap:wrap;
-    row-gap: 48px;
+    row-gap: 72px;
     column-gap: 24px;
     display: flex;
     text-align: center;
@@ -979,7 +972,9 @@ color: #434455;
 
     .container-footer {
         display: flex;
-        max-width: 496px;
+        flex-wrap:wrap;
+        text-align: center;
+        justify-content: center;
     }
 
 .footer-logo {
@@ -1015,6 +1010,11 @@ color: #434455;
 
 .div-subscribe {
     padding-top: 72px;
+    margin-right: 43px;
+}
+
+.footer-div-itim {
+    margin-right: 24px;
 }
 
 /*overlay*/
@@ -1028,9 +1028,14 @@ color: #434455;
 
 @media(min-width:1158px){
 
+    .modal-overlay-phone {
+    display: none;
+}
+
+
 .container {
     max-width: 1158px;
-padding: 0 16px;
+    padding: 0 15px;
 }
 
 /*header*/
@@ -1077,9 +1082,9 @@ letter-spacing: 0.02em;
 color: #2e2f42;
 }
 
+
 .main-section-list{
     gap: 24px;
-    display: flex;
 }
 
 .main-section-item {
@@ -1087,10 +1092,6 @@ color: #2e2f42;
     max-width: 264px;
 }
 
-.main-section-item {
-    gap: 24px;
-     max-width: 1128px;
- }
 
  .main-section-text {
     display: flex;
@@ -1121,32 +1122,22 @@ color: #434455;
 
 /*footer*/
 
-.footer {
-      padding: 100px 0;
-}
-
-.footer-logo {
-    margin-bottom: 16px;
-}
-
 .container-footer {
-   display: flex; 
-    align-items: baseline;
+ flex-wrap: nowrap;
 }
 
 .footer-div-itim {
     margin-right: 120px;
 }
 
-.footer-div-icon{
+.footer-div-icon {
     margin-right: 80px;
 }
-
 /*lable-footer*/
 
 .footer-form{
-    gap: 24px;
     display: flex;
+    gap: 24px;
 }
 
 /*overlay*/
