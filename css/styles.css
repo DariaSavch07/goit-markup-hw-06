@@ -1133,6 +1133,15 @@ color: #434455;
 .footer-div-icon {
     margin-right: 80px;
 }
+
+.footer-text {
+    text-align: left;
+}
+
+.div-subscribe {
+    padding-top: 0;
+}
+
 /*lable-footer*/
 
 .footer-form{
