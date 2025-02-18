@@ -821,7 +821,7 @@ color: #434455;
 
 @media screen and (min-width:768px){
 
-.modal-overlay-phone {
+.mobail-menu-container {
     display: none;
 }
 
@@ -1028,7 +1028,7 @@ color: #434455;
 
 @media(min-width:1158px){
 
-    .modal-overlay-phone {
+    .mobail-menu-container {
     display: none;
 }
 
