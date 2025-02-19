@@ -59,7 +59,9 @@ img {
  }
 
  .header-container {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
  }
 
 .logo {
@@ -73,15 +75,12 @@ img {
 }
 
 .header-logo {
-    padding: 16px 0 16px 0;
+    display: block;
+    padding: 16px 0 ;
 }
 
 .footer-logo .logo-part {
     color: #f4f4fd;
-}
-
-.item-line {
-    padding: 16px 0 16px 0;
 }
 
 .header-logo .logo-part {
@@ -92,16 +91,24 @@ img {
     display: flex;
 }
 
-.ul-close {
-    margin-left: auto;
-}
-
 .nav-list {
     display: none;
 }
 
 .contacts {
     display: none;
+}
+
+.item-line {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.line-icon {
+    display: block;
+    fill: #2f2f37;
+    cursor: pointer;
 }
 
 /* main */
@@ -148,8 +155,18 @@ background-size: cover;
 
 .title-container {
     max-width: 320px;
-    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-tel-bg.jpg), url(../images/title/Dark-tel-bg@2x.jpg);
+    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-tel-bg.jpg);
 }
+
+
+@media (min-resolution: 2x) {
+
+    .title-container {
+        max-width: 320px;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-tel-bg@2x.jpg);
+}
+}
+
 
 .div-main-title {
     display:block;
@@ -171,7 +188,7 @@ color: #fff;
 /* section description*/
 
 .description {
-    margin: 96px 0;
+    padding: 96px 0;
     
 }
 
@@ -366,9 +383,8 @@ color: #2e2f42;
     margin-bottom: 48px;
 }
 
-.section-photo {
-    display:block;
-    height: 300px;
+.portfolio {
+    text-align: left;
 }
 
 .img-text {
@@ -509,7 +525,7 @@ color: #ffffff;
 }
 
 .lable-par {
-    margin-bottom: 16px;
+    padding-bottom: 16px;
     font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -517,6 +533,13 @@ letter-spacing: 0.02em;
 color: #FFFFFF;
 } 
 
+.footer-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+}
 
 .footer-button {
     min-width: 165px;
@@ -534,16 +557,16 @@ color: #FFFFFF;
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
-    margin-left: 62px;
+    margin:auto;
 }
 
 .footer-btn {
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
 .footer-svg {
-    color: #fff;
     margin-left: 16px;
+    fill: #fff;
 }
 
 
@@ -695,15 +718,17 @@ margin-bottom: 16px;
 
 .div-checkbox {
     margin-bottom: 24px;
-    text-align: center;
     justify-content: center;
 }
 
 .privacy-label {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color:#8e8f99;
+    gap: 8px;
 }
 
 .lable-span {
@@ -716,6 +741,7 @@ margin-bottom: 16px;
     justify-content: center;
     border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
+    flex-shrink: 0;
 }
 
 .div-input-privacy:checked + .privacy-label .lable-span {
@@ -791,6 +817,20 @@ margin-bottom: 16px;
     
 }
 
+.mobail-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.overlay-nev {
+    margin-bottom: auto;
+}
+
+
 .button-lable-close:hover,
 .button-lable-close:focus{
     background-color: #404bbf;
@@ -803,7 +843,6 @@ margin-bottom: 16px;
 }
 
 .overlay-text {
-    margin: 72px 0 168px 0;
     max-width: 151px;
 }
 
@@ -813,7 +852,15 @@ margin-bottom: 16px;
 font-size: 36px;
 line-height: 1.1;
 letter-spacing: 0.02em;
-color: #2e2f42;
+
+}
+
+.overlay-text-nav {
+    color: #4d5ae5;
+}
+
+.text-nav {
+    color: #2e2f42;
 }
 
 .text-overlay:hover,
@@ -827,12 +874,12 @@ color: #2e2f42;
 margin-bottom: 40px;
 }
 
-.contacts-link-lable {
+.link-lable {
     color: #434455;
 }
 
 .contacts-lable {
-    padding-bottom: 48px;
+    margin-bottom: 48px;
         max-width: 193px;
     font-style: normal;
 }
@@ -842,11 +889,16 @@ margin-bottom: 40px;
     font-size: 20px; 
     line-height: 1.2;
 letter-spacing: 0.02em;
-color: #434455;
 }
 
 .lable-link {
     margin-bottom: 24px;
+    color: #4d5ae5;
+}
+
+.text-section {
+    justify-content: left;
+    gap: 40px;
 }
 
 /**/
@@ -980,9 +1032,17 @@ color: #434455;
         padding: 112px 0 112px 0;
     }
 
+    
     .title-container {
         max-width: 768px;
-        background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-bg-tab-min.jpg), url(../images/title/Dark-tab-bg@2x.jpg);
+        background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-bg-tab-min.jpg);
+    }
+
+    @media (min-resolution: 2x) {
+
+        .title-container {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-tab-bg@2x.jpg);
+    }
     }
 
     /*people*/
@@ -1025,8 +1085,7 @@ margin: 0;
     .container-footer {
         display: flex;
         flex-wrap:wrap;
-        text-align: center;
-        justify-content: center;
+        padding: 0 108px;
     }
 
 .footer-logo {
@@ -1054,14 +1113,18 @@ margin: 0;
 
 .footer-form {
     display: flex;
-    gap: 24px;
+}
+
+.form-lable {
+    max-width: 264px;
 }
 
 .lable-par {
-    display: flex;
+    text-align: left;
 }
 
 .div-subscribe {
+
     margin-top: 72px;
     margin-right: 43px;
 }
@@ -1136,12 +1199,19 @@ color: #434455
 
 .title {
     padding: 188px 0;
-    height: 600px;
 }
 
 .title-container {
-    max-width: 1158px;
-    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/people-office-desk-1-min.jpg), url(../images/title/people-office-desk-1@2x-min.jpg);
+    max-width: 1440px;
+    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/people-office-desk-1-min.jpg);
+}
+
+@media (min-resolution: 2x) {
+
+    .title-container {
+    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/people-office-desk-1@2x-min.jpg);
+}
+
 }
 
 .main-title {
@@ -1151,7 +1221,9 @@ color: #434455
 /*description*/
 
 .description {
-    margin: 120px 0 120px 0;
+    padding: 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .description-div {
