@@ -525,7 +525,7 @@ color: #ffffff;
 }
 
 .lable-par {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -928,7 +928,7 @@ letter-spacing: 0.02em;
       .logo {
         padding: 24px 0 24px 0;
       }
-
+      
       .nav-list {
         margin-left: 120px;
         padding: 24px 0 24px 0;
@@ -1041,7 +1041,7 @@ letter-spacing: 0.02em;
     @media (min-resolution: 2x) {
 
         .title-container {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-tab-bg@2x.jpg);
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/title/Dark-bg-tab-@2x-min.jpg);
     }
     }
 
@@ -1108,14 +1108,15 @@ margin: 0;
 }
 
 .footer-btn {
-    padding-top: 0;
+    margin-top: 0;
 }
 
 .footer-form {
     display: flex;
+    gap: 24px;
 }
 
-.form-lable {
+.lable-input {
     max-width: 264px;
 }
 
